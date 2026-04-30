@@ -48,6 +48,7 @@ def pick_chat_container(page):
     print("\n")
     print("Cliccare nella parte bianca della chat")
 
+
     return page.evaluate_handle("""
     () => new Promise(resolve => {
 
