@@ -1,0 +1,5 @@
+2026/04/30-21:09:48.790 6597 Creating DB /home/andrea/Documents/Web Development/TeamsChatExporter/teams_profile_linux/Default/IndexedDB/https_bakerhughes-my.sharepoint.com_0.indexeddb.leveldb since it was missing.
+2026/04/30-21:09:48.793 6597 Reusing MANIFEST /home/andrea/Documents/Web Development/TeamsChatExporter/teams_profile_linux/Default/IndexedDB/https_bakerhughes-my.sharepoint.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/30-21:09:55.276 6597 Level-0 table #5: started
+2026/04/30-21:09:55.288 6597 Level-0 table #5: 1951708 bytes OK
+2026/04/30-21:09:55.291 6597 Delete type=0 #3

@@ -1,0 +1,5 @@
+2026/04/30-21:08:45.759 65c4 Creating DB /home/andrea/Documents/Web Development/TeamsChatExporter/teams_profile_linux/Default/Local Storage/leveldb since it was missing.
+2026/04/30-21:08:45.768 65c4 Reusing MANIFEST /home/andrea/Documents/Web Development/TeamsChatExporter/teams_profile_linux/Default/Local Storage/leveldb/MANIFEST-000001
+2026/04/30-21:09:53.458 65c4 Level-0 table #5: started
+2026/04/30-21:09:53.469 65c4 Level-0 table #5: 266278 bytes OK
+2026/04/30-21:09:53.472 65c4 Delete type=0 #3
