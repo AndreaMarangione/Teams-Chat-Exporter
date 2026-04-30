@@ -1,8 +1,8 @@
 from playwright.sync_api import sync_playwright
 import time
-import re
 
 OUTPUT_FILE = "teamsChat.html"
+
 
 def hacker_banner():
     green = "\033[92m"
@@ -43,6 +43,7 @@ def hacker_banner():
 
     print(reset)
 
+
 def pick_chat_container(page):
     print("\n")
     print("Cliccare nella parte bianca della chat")
@@ -79,6 +80,7 @@ def pick_chat_container(page):
         document.addEventListener('click', handler, true);
     })
     """)
+
 
 def get_messages(page):
     return page.evaluate("""
@@ -154,8 +156,8 @@ def get_messages(page):
     }
     """)
 
-def scroll(page, container, direction="down", fast=True):
 
+def scroll(page, container, direction="down", fast=True):
     if fast:
         delta = -3000 if direction == "up" else 3000
     else:
@@ -171,6 +173,7 @@ def scroll(page, container, direction="down", fast=True):
     }
     """, {"el": container, "delta": delta})
 
+
 def force_scroll(page, container, direction="down"):
     delta = 1500 if direction == "down" else -1500
 
@@ -180,8 +183,10 @@ def force_scroll(page, container, direction="down"):
     }
     """, {"el": container, "delta": delta})
 
+
 def nudge(page, container):
     page.evaluate("(el) => el.scrollBy(0, 1)", container)
+
 
 def scroll_up_manual(page, container):
     print("\n")
@@ -224,6 +229,7 @@ def scroll_up_manual(page, container):
                 input()
                 print("Caricamento completato ✅")
                 break
+
 
 def collect_messages(page, container):
     print("\n")
@@ -280,6 +286,7 @@ def collect_messages(page, container):
 
     return raw
 
+
 def main():
     hacker_banner()
     with sync_playwright() as p:
@@ -331,6 +338,7 @@ def main():
         print("Chat esportata con successo ✅")
 
         browser.close()
+
 
 if __name__ == "__main__":
     main()
