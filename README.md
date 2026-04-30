@@ -103,8 +103,6 @@ Click on the blank area of the chat
 
 Click anywhere inside the chat message area
 
-(Insert screenshot here)
-
 
 ### Step 4 - Load the full chat
 
@@ -114,8 +112,6 @@ Wait until the entire chat history is loaded
 
 Press ENTER
 
-(Insert screenshot here)
-
 
 ### Step 5 - Collect messages
 
@@ -124,8 +120,6 @@ Collecting messages...
 Wait until the process stabilizes
 
 Press ENTER
-
-(Insert screenshot here)
 
 
 ### Step 6 - Export completed
