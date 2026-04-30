@@ -46,7 +46,7 @@ def hacker_banner():
 
 def pick_chat_container(page):
     print("\n")
-    print("Cliccare nella parte bianca della chat")
+    print("Click on the blank area of the chat")
 
 
     return page.evaluate_handle("""
@@ -191,9 +191,9 @@ def nudge(page, container):
 
 def scroll_up_manual(page, container):
     print("\n")
-    print("Caricamento dell'intera chat...")
+    print("Loading the full chat...")
     print("\n")
-    print("Premere INVIO quando la chat è stata caricata tutta")
+    print("Press ENTER once the entire chat has been loaded")
 
     i = 0
     stable_rounds = 0
@@ -228,15 +228,15 @@ def scroll_up_manual(page, container):
             import select, sys
             if select.select([sys.stdin], [], [], 0.01)[0]:
                 input()
-                print("Caricamento completato ✅")
+                print("Chat fully loaded ✅")
                 break
 
 
 def collect_messages(page, container):
     print("\n")
-    print("Raccolta messaggi in corso...")
+    print("Collecting messages...")
     print("\n")
-    print("Premere INVIO quando sono stati raccolti tutti i messaggi")
+    print("Press ENTER once all messages have been collected")
 
     seen = set()
     raw = []
@@ -282,7 +282,7 @@ def collect_messages(page, container):
             import select, sys
             if select.select([sys.stdin], [], [], 0.01)[0]:
                 input()
-                print("Raccolta messaggi terminata ✅")
+                print("Message collection completed ✅")
                 break
 
     return raw
@@ -296,12 +296,12 @@ def main():
 
         page.goto("https://teams.microsoft.com")
 
-        input("Salve sig. Taiana!\nEffettui il login, apra la chat da esportare e prema INVIO qui nel terminale")
+        input("Welcome!\nPlease log in, open the chat you want to export, and press ENTER here in the terminal")
 
         container = pick_chat_container(page)
 
         if container is None:
-            print("Container non trovato ❌")
+            print("Didn't find container ❌")
             return
 
         scroll_up_manual(page, container)
@@ -336,7 +336,7 @@ def main():
             f.write(html)
 
         print("\n")
-        print("Chat esportata con successo ✅")
+        print("Chat exported successfully ✅")
 
         browser.close()
 
