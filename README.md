@@ -1,28 +1,53 @@
-# 📄 README.md
+<pre style="color:#00ff00; font-family: monospace;">
 
-## 🧠 Overview
+████████╗███████╗ █████╗ ███╗   ███╗███████╗
+╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██╔════╝
+   ██║   █████╗  ███████║██╔████╔██║███████╗
+   ██║   ██╔══╝  ██╔══██║██║╚██╔╝██║╚════██║
+   ██║   ███████╗██║  ██║██║ ╚═╝ ██║███████║
+   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝
 
-This Python script allows you to **export a full Microsoft Teams chat** directly from your browser into a clean HTML file.
+ ██████╗██╗  ██╗ █████╗ ████████╗
+██╔════╝██║  ██║██╔══██╗╚══██╔══╝
+██║     ███████║███████║   ██║   
+██║     ██╔══██║██╔══██║   ██║   
+╚██████╗██║  ██║██║  ██║   ██║   
+ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
+
+███████╗██╗  ██╗██████╗  ██████╗ ██████╗ ████████╗███████╗██████╗ 
+██╔════╝╚██╗██╔╝██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔══██╗
+█████╗   ╚███╔╝ ██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██████╔╝
+██╔══╝   ██╔██╗ ██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██╔══██╗
+███████╗██╔╝ ██╗██║     ╚██████╔╝██║  ██║   ██║   ███████╗██║  ██║
+╚══════╝╚═╝  ╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
+
+==================================================
+      POWERED BY ANDREA MARANGIONE
+==================================================
+
+</pre>
+
+## <span style="color:#00ff00;">OVERVIEW</span>
+
+This Python script allows you to export a full Microsoft Teams chat directly from your browser into a clean HTML file.
 
 It uses browser automation to:
 - Scroll through the entire chat history
 - Collect all messages
-- Export them into a readable `.html` file
+- Export them into a readable HTML file
 
----
 
-## ⚠️ Requirements
+## <span style="color:#00ff00;">REQUIREMENTS</span>
 
-This script currently works **ONLY under the following conditions**:
+This script works ONLY under the following conditions:
 
-- 🐧 **Linux operating system**
-- 🌐 **Chromium-based browser** (used via Playwright)
+- Linux operating system
+- Chromium-based browser (via Playwright)
 
-It will **NOT work properly on Windows or non-Chromium browsers** without modifications.
+It will not work properly on Windows or non-Chromium browsers without modifications.
 
----
 
-## 📦 Installation
+## <span style="color:#00ff00;">INSTALLATION</span>
 
 ### 1. Install Python
 
@@ -39,8 +64,6 @@ sudo apt update
 sudo apt install python3 python3-pip
 ```
 
----
-
 ### 2. Install dependencies
 
 Install Playwright:
@@ -49,125 +72,99 @@ Install Playwright:
 pip install playwright
 ```
 
-Then install Chromium for Playwright:
+Install Chromium:
 
 ```bash
 playwright install chromium
 ```
 
----
 
-## 🚀 Usage Guide
+## <span style="color:#00ff00;">USAGE GUIDE</span>
 
-### Step 1 — Run the script
+### Step 1 - Run the script
 
 ```bash
 python3 your_script_name.py
 ```
 
----
-
-### Step 2 — Login to Microsoft Teams
+### Step 2 - Login to Microsoft Teams
 
 A browser window will open automatically.
 
-- Log in to your account on **Microsoft Teams**
+- Log in to your account
 - Open the chat you want to export
 
-👉 Then go back to the terminal and press **ENTER**
+Then return to the terminal and press ENTER
 
----
 
-### Step 3 — Select the chat area
+### Step 3 - Select the chat area
 
-The script will ask you to:
+Click on the blank area of the chat
 
-> Click on the blank area of the chat
+Click anywhere inside the chat message area
 
-👉 Click anywhere inside the chat message area (white space)
+(Insert screenshot here)
 
-📸 *(Insert screenshot here — selecting chat area)*
 
----
+### Step 4 - Load the full chat
 
-### Step 4 — Load the full chat
+Loading the full chat...
 
-The script will start scrolling automatically:
+Wait until the entire chat history is loaded
 
-> Loading the full chat...
+Press ENTER
 
-👉 Wait until the entire chat history is loaded
+(Insert screenshot here)
 
-Then press **ENTER**
 
-📸 *(Insert screenshot here — chat fully loaded)*
+### Step 5 - Collect messages
 
----
+Collecting messages...
 
-### Step 5 — Collect messages
+Wait until the process stabilizes
 
-The script will now collect all messages:
+Press ENTER
 
-> Collecting messages...
+(Insert screenshot here)
 
-👉 Wait until the process stabilizes
 
-Then press **ENTER**
+### Step 6 - Export completed
 
-📸 *(Insert screenshot here — message collection)*
+Chat exported successfully
 
----
-
-### Step 6 — Export completed
-
-Once finished, you will see:
-
-```
-Chat exported successfully ✅
-```
-
-The output file will be:
+Output file:
 
 ```
 teamsChat.html
 ```
 
----
 
-## 📁 Output
+## <span style="color:#00ff00;">OUTPUT</span>
 
 The exported file contains:
 - Author name
 - Timestamp
 - Message content
 
-All formatted in a clean, readable HTML layout.
+All formatted in a clean HTML layout.
 
----
 
-## ⚙️ Notes
+## <span style="color:#00ff00;">NOTES</span>
 
-- The script relies on **DOM structure of Microsoft Teams**, so it may break if Teams updates its UI.
-- Make sure the chat is **fully loaded before confirming**, otherwise some messages may be missing.
-- The script avoids duplicate messages automatically.
+- The script depends on Microsoft Teams DOM structure
+- UI updates may break compatibility
+- Ensure the chat is fully loaded before confirming
+- Duplicate messages are automatically filtered
 
----
 
-## 👨‍💻 Author
+## <span style="color:#00ff00;">AUTHOR</span>
 
-Powered by **Andrea Marangione**
+Andrea Marangione
 
----
 
-## 🧩 Future Improvements
+## <span style="color:#00ff00;">FUTURE IMPROVEMENTS</span>
 
 - Windows support
 - Firefox support
-- Automatic full scroll detection (no manual ENTER)
+- Automatic full scroll detection
 - Export to CSV / JSON
-
----
-
-## 📸 Screenshots
-
-*(Add your screenshots here to visually guide users step-by-step)*
