@@ -1,5 +1,6 @@
 from playwright.sync_api import sync_playwright
 import time
+import platform
 
 OUTPUT_FILE = "teamsChat.html"
 
@@ -290,10 +291,26 @@ def collect_messages(page, container):
 def main():
     hacker_banner()
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+
+        system = platform.system()
+
+        if system == "Windows":
+            print("Uso Edge su Windows")
+            browser = p.chromium.launch_persistent_context(
+                user_data_dir="teams_profile_windows",
+                headless=False,
+                channel="msedge"
+            )
+        else:
+            print("Uso Chromium su Linux")
+            browser = p.chromium.launch_persistent_context(
+                user_data_dir="teams_profile_linux",
+                headless=False
+            )
+
         page = browser.new_page()
 
-        page.goto("https://teams.microsoft.com")
+        page.goto("https://teams.microsoft.com/v2/")
 
         input("Salve sig. Taiana!\nEffettui il login, apra la chat da esportare e prema INVIO qui nel terminale")
 
