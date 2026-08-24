@@ -1,6 +1,6 @@
 <div align="center">
 
-# TEAMS-CHAT-EXPORTER
+# Teams-Chat-Exporter
 
 **Export a full Microsoft Teams conversation from the browser into a single, readable HTML file.**
 
