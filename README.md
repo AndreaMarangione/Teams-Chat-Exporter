@@ -154,11 +154,3 @@ All formatted in a clean HTML layout.
 ## <span style="color:#00ff00;">AUTHOR</span>
 
 Andrea Marangione
-
-
-## <span style="color:#00ff00;">FUTURE IMPROVEMENTS</span>
-
-- Windows support
-- Firefox support
-- Automatic full scroll detection
-- Export to CSV / JSON
