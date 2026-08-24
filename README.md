@@ -150,12 +150,6 @@ printed or archived as-is.
 
 ---
 
-## Author
-
-Built by [@AndreaMarangione](https://github.com/AndreaMarangione).
-
----
-
 ## License
 
 Distributed under the **GNU General Public License v3.0**. See [`LICENSE`](LICENSE) for the full text.
