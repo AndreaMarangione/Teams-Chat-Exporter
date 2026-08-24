@@ -10,7 +10,6 @@ message and writes it out as clean, self-contained HTML.
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![License](https://img.shields.io/badge/GPL--3.0-EAB308?style=flat-square)
 
 </div>
 
